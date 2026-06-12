@@ -43,7 +43,7 @@ pip install -r requirements.txt
 4. Download TACO images
 
 ```bash
-python scripts/download_taco.py --dataset_path data/raw/TACO/data/annotations.json
+python scripts/download_taco.py --dataset_path data/raw/annotations.json
 ```
 
 The images will be downloaded into the same dataset directory according to the file paths specified in `annotations.json`.

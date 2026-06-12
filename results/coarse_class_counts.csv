@@ -1,0 +1,7 @@
+class_id,class_name,count
+0,rigid_plastic,1395
+1,soft_plastic,857
+2,paper/cardboard,497
+3,metal,550
+4,glass,254
+5,other,1231
