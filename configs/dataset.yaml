@@ -1,1 +1,11 @@
+path: C:/Users/user/Desktop/EcoVision/data/processed
+train: images/train
+val: images/val
 
+names:
+  0: rigid_plastic
+  1: soft_plastic
+  2: paper/cardboard
+  3: metal
+  4: glass
+  5: other

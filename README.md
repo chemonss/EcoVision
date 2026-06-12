@@ -48,6 +48,13 @@ python scripts/download_taco.py --dataset_path data/raw/annotations.json
 
 The images will be downloaded into the same dataset directory according to the file paths specified in `annotations.json`.
 
+5. Prepare the dataset
+
+```bash
+python scripts/prepare_dataset.py --overwrite
+```
+
+This command converts the original TACO annotations into the YOLO-format dataset used by the project.
 
 ## Project Goal
 
