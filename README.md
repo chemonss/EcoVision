@@ -152,18 +152,22 @@ ecovision/
 ├── app.py
 ├── README.md
 ├── requirements.txt
+├── .gitignore
+│
+├── configs/
+│   └── dataset.yaml
 │
 ├── data/
 │   ├── raw/
-│   ├── processed/
-│   └── dataset.yaml
+│   └── processed/
 │
 ├── models/
 │   └── best.pt
 │
 ├── notebooks/
 │   ├── dataset_preparation.ipynb
-│   └── training.ipynb
+│   ├── training.ipynb
+│   └── evaluation.ipynb
 │
 ├── src/
 │   ├── inference.py
@@ -173,11 +177,11 @@ ecovision/
 │   └── utils.py
 │
 ├── demo_images/
-│   ├── example_1.jpg
-│   ├── example_2.jpg
-│   └── example_3.jpg
+│
+├── results/
 │
 └── presentation/
+    ├── report.pdf
     └── slides.pdf
 ```
 
