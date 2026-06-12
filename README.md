@@ -4,12 +4,57 @@ EcoVision — приложение компьютерного зрения дл�
 
 Проект решает прикладную задачу экологического мониторинга: быстрая оценка загрязненности территории по изображению и получение статистики по типам найденных отходов.
 
+## Installation and Usage
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/chemonss/EcoVision
+cd EcoVision
+```
+
+2. Create a virtual environment
+
+- PowerShell
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+- CMD
+```cmd
+python -m venv .venv
+.venv\Scripts\activate.bat
+```
+
+- Linux / macOS
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+3. Install dependencies
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+4. Download TACO images
+
+```bash
+python scripts/download_taco.py --dataset_path data/raw/TACO/data/annotations.json
+```
+
+The images will be downloaded into the same dataset directory according to the file paths specified in `annotations.json`.
+
+
 ## Project Goal
 
 Разработать end-to-end CV-приложение:
 
 ```text
-image upload
+→ image upload
 → waste object detection
 → bounding boxes + class labels + confidence scores
 → waste statistics
@@ -211,3 +256,5 @@ ecovision/
 ## Expected Result
 
 К концу проекта мы ожидаем получить работающий прототип системы визуального обнаружения отходов. Окончательное приложение должно продемонстрировать весь процесс от ввода необработанных изображений до обнаружения объектов, визуальных аннотаций, статистики отходов и кратких рекомендаций по очистке.
+
+
