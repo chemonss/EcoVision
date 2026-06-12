@@ -1,0 +1,91 @@
+# Python cache
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+
+venv/
+env/
+.venv/
+.env/
+
+# Jupyter Notebook checkpoints
+
+.ipynb_checkpoints/
+
+# IDE and OS files
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+
+*.log
+logs/
+
+# Python packaging
+
+build/
+dist/
+*.egg-info/
+
+# Streamlit cache/config
+
+.streamlit/secrets.toml
+
+# Dataset files
+
+data/raw/*
+data/processed/*
+
+# Keep empty data folders in Git
+
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/README.md
+
+# Model weights
+
+models/*.pt
+models/*.pth
+models/*.onnx
+models/*.engine
+
+# Keep models folder in Git
+
+!models/.gitkeep
+
+# YOLO / Ultralytics training outputs
+
+runs/
+wandb/
+mlruns/
+
+# Temporary files
+
+tmp/
+temp/
+*.tmp
+
+# Large archives
+
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Local experiment outputs
+
+outputs/
+checkpoints/
+
+# CUDA / profiling / debug files
+
+*.prof
+*.nvvp
+*.trace
