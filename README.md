@@ -80,11 +80,11 @@ The images will be downloaded into the same dataset directory according to the f
 Для повышения устойчивости модели исходные категории TACO объединяются в укрупненные классы:
 
 ```text
-plastic
+rigid_plastic
+soft_plastic
 paper/cardboard
 metal
 glass
-organic
 other
 ```
 

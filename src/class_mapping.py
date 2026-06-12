@@ -3,7 +3,7 @@ Class mapping utilities for EcoVision.
 
 This module defines the mapping between original TACO dataset categories 
 and the coarse waste classes used in the project: 
-plastic, paper/cardboard, metal, glass, organic, and other. 
+rigid_plastic, soft_plastic, paper/cardboard, metal, glass, and other.
 """
 
 from __future__ import annotations
@@ -38,7 +38,7 @@ def map_taco_category_to_coarse(name: str, supercategory: str | None = None) -> 
 
     Returns
         str
-            One of: plastic, paper/cardboard, metal, glass, organic, other.
+            One of: rigid_plastic, soft_plastic, paper/cardboard, metal, glass, and other.
     """
     text = f"{name} {supercategory or ''}".lower()
 
