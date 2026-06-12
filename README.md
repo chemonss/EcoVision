@@ -103,7 +103,9 @@ mAP@50
 precision
 recall
 confusion matrix
-inference time
+training/validation loss curves
+examples of successful predictions
+examples of failure cases
 ```
 
 ### 3. Inference Pipeline
