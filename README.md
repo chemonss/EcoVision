@@ -71,6 +71,14 @@ one_label = False  # six coarse classes
 one_label = True   # one class: waste
 ```
 
+7. Run inference app
+
+```bash
+streamlit run app.py
+```
+
+By default the app uses `models/best.pt`. It accepts one uploaded image, runs detection, draws bounding boxes, shows the detections table, class statistics, pollution level, and cleanup recommendation.
+
 ## Project Goal
 
 Разработать end-to-end CV-приложение:
@@ -207,6 +215,13 @@ examples of failure cases
 }
 ```
 
+The implemented inference code is split into small modules:
+
+* `src/inference.py` loads the trained YOLO model and returns structured detections;
+* `src/visualization.py` draws bounding boxes and labels;
+* `src/report.py` builds the detections table, class statistics, pollution level and recommendation;
+* `src/utils.py` handles image loading and basic validation.
+
 ### 4. Web Application
 
 Интерфейс реализуется на Streamlit.
@@ -288,4 +303,3 @@ ecovision/
 ## Expected Result
 
 К концу проекта мы ожидаем получить работающий прототип системы визуального обнаружения отходов. Окончательное приложение должно продемонстрировать весь процесс от ввода необработанных изображений до обнаружения объектов, визуальных аннотаций, статистики отходов и кратких рекомендаций по очистке.
-

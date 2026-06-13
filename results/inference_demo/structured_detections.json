@@ -1,0 +1,56 @@
+{
+  "objects": [
+    {
+      "class_id": 0,
+      "class_name": "waste",
+      "confidence": 0.7552,
+      "box": [
+        691.39,
+        1989.6,
+        810.12,
+        2089.88
+      ]
+    },
+    {
+      "class_id": 0,
+      "class_name": "waste",
+      "confidence": 0.5849,
+      "box": [
+        937.58,
+        1848.74,
+        1030.23,
+        1944.25
+      ]
+    },
+    {
+      "class_id": 0,
+      "class_name": "waste",
+      "confidence": 0.5141,
+      "box": [
+        203.08,
+        1525.49,
+        349.21,
+        1679.92
+      ]
+    },
+    {
+      "class_id": 0,
+      "class_name": "waste",
+      "confidence": 0.3098,
+      "box": [
+        537.46,
+        2288.05,
+        647.02,
+        2398.92
+      ]
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "by_class": {
+      "waste": 4
+    }
+  },
+  "pollution_level": "medium",
+  "recommendation": "Several waste objects were detected, mostly waste. Cleanup with gloves and sorting bags is recommended."
+}
