@@ -55,7 +55,7 @@ data/**/*.cache
 
 yolov*.pt
 yolo*.pt
-models/*.pt
+# models/*.pt
 models/*.pth
 models/*.onnx
 models/*.engine
