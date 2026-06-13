@@ -48,13 +48,28 @@ python scripts/download_taco.py --dataset_path data/raw/annotations.json
 
 The images will be downloaded into the same dataset directory according to the file paths specified in `annotations.json`.
 
-5. Prepare the dataset
+5. Prepare the six-class dataset
 
 ```bash
 python scripts/prepare_dataset.py --overwrite
 ```
 
 This command converts the original TACO annotations into the YOLO-format dataset used by the project.
+
+6. Optional: prepare the one-label dataset
+
+```bash
+python scripts/prepare_one_label_dataset.py --overwrite
+```
+
+This command reuses `data/processed`, keeps the same train/validation split and bounding boxes, but rewrites every object class to one class: `waste`. Images are symlinked into `data/processed_one_label` by default, so the image files are not duplicated.
+
+The training notebook can switch between datasets with:
+
+```python
+one_label = False  # six coarse classes
+one_label = True   # one class: waste
+```
 
 ## Project Goal
 
@@ -96,6 +111,14 @@ other
 ```
 
 Такой формат упрощает обучение, снижает влияние дисбаланса классов и делает результат более понятным для пользователя.
+
+Для проверки, насколько хорошо модель умеет просто находить мусор без классификации типа отхода, дополнительно поддерживается one-label вариант:
+
+```text
+waste
+```
+
+Он создается скриптом `scripts/prepare_one_label_dataset.py` из уже подготовленного `data/processed`: все bounding boxes сохраняются, а все class id заменяются на `0`.
 
 ## Architecture
 
@@ -207,11 +230,13 @@ ecovision/
 ├── .gitignore
 │
 ├── configs/
-│   └── dataset.yaml
+│   ├── dataset.yaml
+│   └── dataset_one_label.yaml
 │
 ├── data/
 │   ├── raw/
-│   └── processed/
+│   ├── processed/
+│   └── processed_one_label/
 │
 ├── models/
 │   └── best.pt
@@ -263,5 +288,4 @@ ecovision/
 ## Expected Result
 
 К концу проекта мы ожидаем получить работающий прототип системы визуального обнаружения отходов. Окончательное приложение должно продемонстрировать весь процесс от ввода необработанных изображений до обнаружения объектов, визуальных аннотаций, статистики отходов и кратких рекомендаций по очистке.
-
 

@@ -1,0 +1,6 @@
+path: /home/ilya/ML/CV/project/EcoVision/data/processed_one_label
+train: images/train
+val: images/val
+
+names:
+  0: waste
