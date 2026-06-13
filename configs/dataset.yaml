@@ -1,4 +1,4 @@
-path: C:/Users/user/Desktop/EcoVision/data/processed
+path: /home/ilya/ML/CV/project/EcoVision/data/processed
 train: images/train
 val: images/val
 

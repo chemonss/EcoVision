@@ -128,6 +128,24 @@ def make_safe_image_name(file_name: str) -> str:
     return f"{stem}{suffix}"
 
 
+def resolve_image_path(images_root: Path, relative_path: Path) -> Path:
+    """
+    Find an image path even when the local extension case differs from annotations.
+    """
+    image_path = images_root / relative_path
+
+    if image_path.exists():
+        return image_path
+
+    if image_path.parent.exists():
+        target_name = image_path.name.lower()
+        for candidate in image_path.parent.iterdir():
+            if candidate.name.lower() == target_name:
+                return candidate
+
+    raise FileNotFoundError(f"Image file not found: {image_path}")
+
+
 def coco_bbox_to_yolo(
     bbox: list[float],
     image_width: int,
@@ -534,7 +552,7 @@ def convert_dataset(args: argparse.Namespace) -> None:
         image_height = int(image_info["height"])
 
         source_relative_path = Path(image_info["file_name"])
-        source_image_path = args.images_root / source_relative_path
+        source_image_path = resolve_image_path(args.images_root, source_relative_path)
 
         output_image_name = make_safe_image_name(image_info["file_name"])
         output_label_name = Path(output_image_name).with_suffix(".txt").name

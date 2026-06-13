@@ -41,13 +41,20 @@ dist/
 # Dataset images
 
 data/**/*.jpg
+data/**/*.JPG
 data/**/*.jpeg
+data/**/*.JPEG
 data/**/*.png
+data/**/*.PNG
 data/**/*.bmp
+data/**/*.BMP
 data/**/*.txt
+data/**/*.cache
 
 # Model weights
 
+yolov*.pt
+yolo*.pt
 models/*.pt
 models/*.pth
 models/*.onnx
@@ -60,6 +67,19 @@ models/*.engine
 # YOLO / Ultralytics training outputs
 
 runs/
+results/runs/
+results/*_eval/
+results/evaluation/
+results/new_image_tests/
+results/error_examples/
+results/plots/
+results/metrics.csv
+results/metrics.md
+results/model_comparison*.csv
+results/model_comparison*.md
+results/confusion_matrix.png
+results/training_curves.png
+results/training_results.png
 wandb/
 mlruns/
 
