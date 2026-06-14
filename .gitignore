@@ -69,7 +69,11 @@ models/*.engine
 runs/
 results/runs/
 results/*_eval/
+!results/yolov8s_50ep_eval
+results/yolov8s_50ep_eval/*
 !results/yolov8s_50ep_eval/error_examples
+!results/yolov8s_onelabel_50ep_eval
+results/yolov8s_onelabel_50ep_eval/*
 !results/yolov8s_onelabel_50ep_eval/error_examples
 results/evaluation/
 results/new_image_tests/
