@@ -42,7 +42,7 @@ def draw_detections(
         color = detection_color(class_id)
         label = f"{detection['class_name']} {detection['confidence']:.2f}"
 
-        draw.rectangle([x1, y1, x2, y2], outline=color, width=3)
+        draw.rectangle([x1, y1, x2, y2], outline=color, width=5)
         text_box = draw.textbbox((x1, y1), label, font=font)
         text_height = text_box[3] - text_box[1]
         text_width = text_box[2] - text_box[0]

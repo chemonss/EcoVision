@@ -14,7 +14,7 @@ from src.utils import load_image
 from src.visualization import draw_detections
 
 
-DEFAULT_MODEL = Path("models/best.pt")
+DEFAULT_MODEL = Path("models/best_onelabel.pt")
 
 
 @st.cache_resource
